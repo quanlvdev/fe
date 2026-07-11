@@ -38,6 +38,7 @@ async function submit() {
             sm="8"
             md="5"
             lg="4"
+            class="justify-center"
         >
           <v-card
               class="pa-8 rounded-xl"
@@ -117,7 +118,7 @@ async function submit() {
 <style scoped>
 .login-page {
   min-height: 100vh;
-  background: #f5f7fb;
+  background: #000;
 }
 
 .v-card {

@@ -321,7 +321,7 @@ onMounted(async () => {
 }
 
 .user-summary span {
-  color: rgba(0, 0, 0, 0.6);
+  color: whitesmoke;
   text-transform: capitalize;
 }
 
