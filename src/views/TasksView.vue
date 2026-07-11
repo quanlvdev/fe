@@ -53,13 +53,16 @@ const assigneeFilterOptions = computed(() => [
 ])
 
 function statusColor(status: TaskStatus) {
-  console.log(status)
-
-  return {
+  const map = {
     todo: 'grey',
     in_progress: 'blue',
     done: 'green',
-  }[status]
+  }
+
+  console.log('status =', status)
+  console.log('color =', map[status])
+
+  return map[status]
 }
 
 function statusLabel(status: TaskStatus) {
@@ -264,7 +267,9 @@ onMounted(async () => {
                 </td>
                 <td>{{ task.assignee?.name ?? '-' }}</td>
                 <td>
-                  <v-chip :color="statusColor(task.status)" size="small" variant="tonal">
+                  <v-chip
+                      :style="{ backgroundColor: statusColor(task.status), color: 'white' }"
+                  >
                     {{ statusLabel(task.status) }}
                   </v-chip>
                 </td>
