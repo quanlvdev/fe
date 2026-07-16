@@ -160,15 +160,6 @@ onMounted(async () => {
   <v-main>
     <v-app-bar color="white" elevation="1">
       <v-app-bar-title>Team Task Manager</v-app-bar-title>
-      <v-btn
-        class="mr-3"
-        color="primary"
-        prepend-icon="mdi-plus"
-        variant="flat"
-        @click="openCreate"
-      >
-        New task
-      </v-btn>
       <v-spacer />
       <div v-if="currentUser" class="user-summary">
         <strong>{{ currentUser.name }}</strong>
